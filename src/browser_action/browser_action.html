@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="iRacingFriends" ng-csp>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/fontello.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<script type="text/javascript" src="/src/options_custom/lib/store.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+	<div id="popup" ng-controller="PopupController">
+		<nav>
+			<h1>iRacing Friends</h1>
+			<div class="refresh" ng-click="update()" title="Refresh">
+				<i class="icon-spin3" ng-class="{ 'animate-spin': refreshing }"></i>
+			</div>
+		</nav>
+
+		<div>
+			<ul class="list-roster">
+				<li ng-repeat="friend in friends" ng-class-even="'friend-even'">
+					<a href="http://members.iracing.com/membersite/member/CareerStats.do?custid={{ friend.original.custid }}" target="_blank">
+						<div class="friend-name" ng-class="{ 'friend-name-offline': !friend.isOnline }">
+							{{ friend.original.name }}
+							<div class="friend-online" ng-class="{'friend-offline': !friend.isOnline}"></div>
+						</div>
+						<div class="friend-status" ng-if="friend.regStatus">
+							{{ friend.regStatus || "Online" }}
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+	"name": "iRacing Friends",
+	"version": "1",
+	"manifest_version": 2,
+	"update_url": "http://kutu182.narod.ru/iRacingFriends/update.xml",
+	"description": "Showing your iRacing friends online status.",
+	"homepage_url": "http://kutu.ru",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"background": {
+		"scripts": [
+			"src/options_custom/lib/store.js",
+			"src/bg/background.js"
+		],
+		"persistent": false
+	},
+	"options_page": "src/options_custom/index.html",
+	"browser_action": {
+		"default_icon": "icons/icon19.png",
+		"default_title": "iRacing Friends",
+		"default_popup": "src/browser_action/browser_action.html"
+	},
+	"permissions": [
+		"alarms",
+		"notifications",
+		"storage",
+		"http://members.iracing.com/"
+	]
+}

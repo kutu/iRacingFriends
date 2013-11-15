@@ -1,0 +1,105 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+#popup {
+	height: 360px;
+	padding: 0;
+	width: 240px;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333;
+	border-radius: 4px;
+}
+
+/* NAV */
+
+nav {
+	background: #333;
+	padding: 5px;
+}
+h1 {
+	display: inline-block;
+	color: #F7F7F7;
+	font-size: 18px;
+	margin: 0;
+	cursor: default;
+}
+
+/* REFRESH */
+
+.refresh {
+	color: #F7F7F7;
+	cursor: pointer;
+	float: right;
+	opacity: .6;
+	padding: 1px 0;
+	transition: opacity .05s;
+}
+.refresh:hover {
+	opacity: 1;
+}
+
+/* ROSTER */
+
+.list-roster {
+	cursor: default;
+	font-size: 14px;
+	list-style: none;
+	margin-top: 1px;
+	max-height: 328px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-left: 0;
+}
+
+.list-roster > li {
+	border-bottom: 1px solid #EEE;
+	padding: 3px;
+}
+.friend-even {
+	background: #FAFAFA;
+}
+.friend-name {
+	color: #333;
+	font-weight: bold;
+	text-shadow: #EEE 0 1px;
+}
+.friend-name-offline {
+	color: #999;
+	font-size: 12px;
+	font-weight: normal;
+	text-shadow: none;
+}
+.friend-online {
+	background: #0A0;
+	border-radius: 2px;
+	float: right;
+	height: 5px;
+	margin-top: .4em;
+	width: 5px;
+}
+.friend-offline {
+	background: #ccc;
+}
+.friend-status {
+	color: #0A0;
+	font-size: 11px;
+}
